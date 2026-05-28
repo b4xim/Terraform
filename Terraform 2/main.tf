@@ -7,6 +7,6 @@ resource "local_file" "ex-1"{
 
 resource "local_sensitive_file" "ex-2"{
     filename = "${path.module}/secret${count.index+1}.md"
-    content = "This is a secret file and should not be exposed! - Password: 123456"
+    content = "This is a secret file and should not be exposed! - Password: ~~123456~~"
     count = 2
 }

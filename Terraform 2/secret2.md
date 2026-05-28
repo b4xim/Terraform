@@ -1,1 +1,1 @@
-This is a secret file and should not be exposed! - Password: 123456
+This is a secret file and should not be exposed! - Password: ~~123456~~
