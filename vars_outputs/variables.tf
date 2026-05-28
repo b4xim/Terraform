@@ -19,3 +19,13 @@ variable "count-num"{
     default = 1
     type = number
 }
+
+locals{
+    environment = "dev"
+    upper_case = upper(local.environment)
+    base_path = "${path.module}/config/${local.upper_case}"
+}
+
+output "filename"{
+    value=local_file.server_config.filename
+}

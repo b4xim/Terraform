@@ -10,5 +10,14 @@ resource "local_file" "example2" {
 }
 resource "local_file" "example3" {
     content  = "This is a local file created by Terraform."
-    filename = "${path.module}/${var.filename-3}.demo"
+    filename = "${path.module}/example.md"
+}
+resource "local_file" "server_config" {
+    filename = "${local.base_path}/server.sh"
+    content  = <<-EOT
+                #!/bin/bash
+                environment="${local.environment}"
+                port=3000
+                echo "This is a server configuration script."
+                EOT
 }
