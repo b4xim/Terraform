@@ -5,7 +5,7 @@ resource "local_file" "example1" {
 }
 resource "local_file" "example2" {
     content  = "This is a local file created by Terraform."
-    filename = "${path.module}/${var.filename-2}.md"
+    filename = "${path.module}/${var.filename-1}.md"
     count    = var.count-num
 }
 resource "local_file" "example3" {
