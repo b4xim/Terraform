@@ -9,3 +9,7 @@ resource "local_sensitive_file" "ex-2"{
     filename = "${path.module}/secret.txt"
     content = "This is a secret file and should not be exposed! - Password: 123456"
 } 
+resource "local_sensitive_file" "ex-3"{
+    filename = "${path.module}/secret3.txt"
+    content = "This is a secret file and should not be exposed! - Password: 123456"
+} 
